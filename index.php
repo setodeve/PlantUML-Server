@@ -4,17 +4,6 @@ spl_autoload_extensions(".php");
 spl_autoload_register();
 require_once 'vendor/autoload.php';
 
-use function Jawira\PlantUml\encodep;
-
-$diagram = <<<TXT
-@startuml
-Bob -> Alice : hello
-@enduml
-TXT;
-
-$encode = encodep($diagram); // SyfFKj2rKt3CoKnELR1Io4ZDoSa70000
-
-// echo "https://www.plantuml.com/plantuml/uml/$encode";
 
 ?>
 
