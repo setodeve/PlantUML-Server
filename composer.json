@@ -1,5 +1,6 @@
 {
     "require": {
-        "jawira/plantuml-encoding": "^1.1"
+        "jawira/plantuml-encoding": "^1.1",
+        "erusev/parsedown": "^1.7"
     }
 }

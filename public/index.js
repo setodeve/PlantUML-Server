@@ -27,6 +27,7 @@ require(['vs/editor/editor.main'], function() {
 
 
 function proceedOutput() {
+  // console.log(editor.getValue())
   fetch('renderOutput.php', {
       method: 'POST',
       body: JSON.stringify({
