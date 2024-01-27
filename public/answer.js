@@ -1,19 +1,28 @@
+import data from "./data.json" assert { type: "json" };
 let typeAnswer = "UML"
 const answer = document.getElementById('answer-container-show')
 const buttonUML = document.getElementById('buttonUML')
 const buttonCODE = document.getElementById('buttonCODE')
+const answerCode = IntialAnswer()["code"]
 
 window.addEventListener("load", (event) => {
-  proceedAnswer(typeAnswer);
+  proceedAnswer("UML");
+});
+
+buttonUML.addEventListener("click", () => {
+  proceedAnswer("UML")
+});
+
+buttonCODE.addEventListener("click", () => {
+  proceedAnswer("CODE")
 });
 
 function proceedAnswer(type) {
   typeAnswer = type
-  data =  '@startuml\nBob -> Alice : hello\n@enduml'
   fetch('renderAnswer.php', {
       method: 'POST',
       body: JSON.stringify({
-        "textData":data,
+        "textData":answerCode,
         "type":typeAnswer
       })
   })
@@ -27,13 +36,16 @@ function proceedAnswer(type) {
     }else{
       const ele = document.createElement('div')
       ele.innerHTML = res["data"].replaceAll('\n', '<br>');
-      console.log(ele.innerHTML)
       answer.appendChild(ele)
     }
-
-
   })
   .catch(error => {
       console.log(error);
   });
+}
+
+function IntialAnswer(){
+  const url = new URL(window.location.href);
+  const title = url.searchParams.get('title');
+  return data.find(d => d.title === title);
 }

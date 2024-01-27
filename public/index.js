@@ -8,17 +8,14 @@ window.addEventListener("load", (event) => {
 require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.20.0/min/vs' }});
 require(['vs/editor/editor.main'], function() {
   editor = monaco.editor.create(document.getElementById('input-container'), {
-        value: [
-            '',
-            '@startuml',
-            'Bob -> Alice : hello',
-            '@enduml',
-            ''
-        ].join('\n'),
+        value: '',
         language: 'markdown',
-        automaticLayout: true
+        automaticLayout: true,
+        colors: {
+          "editor.background": '#dce7f2'
+        }
     });
-    monaco.editor.setTheme('default')
+    
     
     editor.onDidChangeModelContent(e => {
       proceedOutput()      

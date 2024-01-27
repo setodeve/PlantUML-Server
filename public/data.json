@@ -1,0 +1,22 @@
+[
+  {
+    "title": "シーケンス図",
+    "code": "@startuml\nAlice -> Bob: Request\nBob --> Alice: Response\n@enduml"
+  },
+  {
+    "title": "クラス図",
+    "code": "@startuml\nclass User {\n  +String name\n  +String email\n}\n@enduml"
+  },
+  {
+    "title": "ユースケース図",
+    "code": "@startuml\nleft to right direction\n:User: as User\n(Use the Application) as (Use)\nUser -- (Use)\n@enduml"
+  },
+  {
+    "title": "アクティビティ図",
+    "code": "@startuml\nstart\n:do something;\nstop\n@enduml"
+  },
+  {
+    "title": "状態遷移図",
+    "code": "@startuml\n[*] -> Active\nActive -> Inactive\nInactive -> [*]\n@enduml"
+  }
+]

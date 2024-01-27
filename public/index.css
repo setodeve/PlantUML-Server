@@ -3,12 +3,54 @@ body, html {
   height: 100%;
   margin:0;
   padding:0;
+  background: #dce7f2;
 }
 
 img{
   display: block;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
+  margin: 5% auto;
+}
+
+ul{
+  width: 100%;
+  padding: 0;
+  margin: 0 auto
+}
+
+ul li{
+  width: 60%;
+  margin: 1% 20%;
+  color: #2d8fdd;
+  border-left: solid 6px #2d8fdd;
+  background: #f1f8ff;
+  margin-bottom: 3px;
+  line-height: 1.5;
+  padding: 0.5em;
+  list-style-type: none!important;
+}
+
+
+.header {
+  overflow: hidden;
+  background-color: #8cb8db;
+  padding: 20px 10px;
+  margin-bottom: 5%;
+}
+
+.header h1 {
+  float: left;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.title {
+  margin: 5px;
+  font-weight: bold;
 }
 
 #container{
@@ -36,5 +78,15 @@ img{
   height: 80%;
   float: right;
   border: solid 1px;
+}
+
+#answer-container-show > div{
+  width: 100%;
+  margin: auto 1%;
+}
+
+.problem-container{
+  display: flex;
+  justify-content: space-between;
 }
 
