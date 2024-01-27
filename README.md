@@ -6,6 +6,7 @@
 [PlantUML](https://plantuml.com/ja/)の構文を使用して、ユーザーはユースケース図、クラス図、アクティビティ図、状態図、マインドマップ、ガント図などを簡単に作成できます。
 
 ## デモ
+![demo](https://github.com/setodeve/PlantUML-Server/assets/83833293/a824c62e-ed1d-4238-a538-76a021195321)
 
 ## URL
 https://plantuml.setodeve.tech/
