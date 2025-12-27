@@ -9,7 +9,7 @@
 現在非公開中
 
 ## URL
-https://plantuml.setodeve.tech/
+ 現在非公開
 
 ## 特徴
 - コードエディタを使用してPlantUMLコードを記述します。
